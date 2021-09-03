@@ -178,7 +178,7 @@
 
   <div style="text-align: center;">
     
-    <table style="border-collapse: collapse; width: 90%; max-width: 984px; margin: auto;" cellspacing="0" cellpadding="0">
+    <table style="border-collapse: collapse; width: 100%; max-width: 1280px; margin: auto;" cellspacing="0" cellpadding="0">
       <tr style="font-size: 12px;">
         <td> <b> "Landscape" </b></td>
         <td> <b> "Self" </b></td>
@@ -240,28 +240,17 @@
         </td>
       </tr>
       <tr style="font-size: 12px;">
-        <td> <b> "A picture of Google" </b></td>
-        <td> <b> "An ancient citadel" </b></td>
-        <td> <b> "The Acropolis of Athens ..." (A) </b></td>
-        <td> <b> "The corporate ..." (B) </b></td>
-        <td> <b> "The Tokyo Tower is ..." (C) </b></td>
-        <td> <b> "The United States ..." (D) </b></td>
-      </tr>
-      <tr style="text-align: left; font-size: 12px; line-height: 1.5em;">
-        <td colspan="6" >
-            A. "The Acropolis of Athens is an ancient citadel located on a rocky outcrop above the city of
-            Athens and contains the remains of several ancient buildings including the Parthenon."
-            <br>
-            B. "The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain View,
-            California.The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain
-            View, California."
-            <br>
-            C. "The Tokyo Tower is a communications and observation tower in the Shiba-koen district of Minato Tokyo
-            Japan."
-            <br>
-            D. "The United States of America commonly known as the United States or America is a country primarily located
-            in North America."
-        </td>
+        <td> <b>"A picture of Google" </b></td>
+        <td> <b>"An ancient citadel"</b></td>
+        <td> <b>"The Acropolis of Athens ..." </b>  <dt-fn> "The Acropolis of Athens is an ancient citadel located on a rocky outcrop above the city of
+          Athens and contains the remains of several ancient buildings including the Parthenon." </dt-fn> </td>
+        <td> <b>"The corporate ..."</b> <dt-fn>  "The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain View,
+          California.The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain
+          View, California." </dt-fn> </td>
+        <td> <b>"The Tokyo Tower is ..."</b>   <dt-fn> "The Tokyo Tower is a communications and observation tower in the Shiba-koen district of Minato Tokyo
+          Japan." </dt-fn></td>
+        <td> <b>"The United States ..."</b> <dt-fn> "The United States of America commonly known as the United States or America is a country primarily located
+          in North America."</dt-fn></td>
       </tr>
 
     </table>
@@ -310,7 +299,8 @@
         </div>
       </div>
     </dt-byline><h2>Abstract</h2>
-<p>Evolutionary algorithms have been used in the digital art scene since the 1970s. A popular application of genetic algorithms is to optimize the procedural placement of vector graphic primitives to resemble a given painting. In recent years, deep learning-based approaches have also been proposed to generate procedural drawings, which can be optimized using gradient descent. In this work, we revisit the use of evolutionary algorithms for computational creativity. We find that modern evolution strategies (ES) algorithms,  when tasked with the placement of shapes, offer large improvements in both quality and efficiency compared to traditional genetic algorithms, and even comparable to gradient-based methods. We demonstrate that ES is also well suited at optimizing the placement of shapes to fit the CLIP model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.</p>
+<p>Evolutionary algorithms have been used in the digital art scene since the 1970s. A popular application of genetic algorithms is to optimize the procedural placement of vector graphic primitives to resemble a given painting. In recent years, deep learning-based approaches have also been proposed to generate procedural drawings, which can be optimized using gradient descent.</p>
+<p>In this work, we revisit the use of evolutionary algorithms for computational creativity. We find that modern evolution strategies (ES) algorithms,  when tasked with the placement of shapes, offer large improvements in both quality and efficiency compared to traditional genetic algorithms, and even comparable to gradient-based methods. We demonstrate that ES is also well suited at optimizing the placement of shapes to fit the CLIP model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.</p>
 <hr>
 <h2>Introduction</h2>
 <p>The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists in the early 20th-century, abandoned the depiction of objects from tradition rules of perspective. Instead, objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. The use of simple geometry helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. This minimalist approach is also evident later in Picasso's line drawings <dt-cite key="stein1984picasso,picasso_fearless"></dt-cite>.</p>
