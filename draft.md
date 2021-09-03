@@ -18,7 +18,7 @@ As one example, a basic genetic algorithm using evolution has been proposed <dt-
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr>
          <td style="width: 50%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
          </td>
          <td style="width: 50%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -87,7 +87,7 @@ We provide a reference implementation and interactive notebook demos of our appr
 ## Modern Evolution Strategies based Creativity
 
 <div style="text-align: center;">
-   <img class="b-lazy b-loaded" src="assets/manual/pg_0002.jpg" style="display: block; margin: auto; width: 100%;">
+   <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/manual/pg_0002.jpg" style="display: block; margin: auto; width: 100%;">
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Our proposed method synthesizes painting by placing transparent triangles using Evolution Strategy (ES). 
@@ -147,7 +147,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       </tr>
       <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-darwin.png" style="margin: none; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-darwin.png" style="margin: none; width: 95%;">
          </td>
          <td style="width: 20%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-darwin-10-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -171,7 +171,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       </tr>
       <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: none; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-monalisa.png" style="margin: none; width: 95%;">
          </td>
          <td style="width: 20%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-10-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -195,7 +195,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       </tr>
       <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-waifu.png" style="margin: none; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-waifu.png" style="margin: none; width: 95%;">
          </td>
          <td style="width: 20%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-waifu-10-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -219,7 +219,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       </tr>
       <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-landscape.png" style="margin: none; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-landscape.png" style="margin: none; width: 95%;">
          </td>
          <td style="width: 20%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-landscape-10-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -243,7 +243,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       </tr>
          <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-impressionism.png" style="margin: none; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-impressionism.png" style="margin: none; width: 95%;">
          </td>
          <td style="width: 20%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-impressionism-10-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -258,7 +258,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-impressionism-200-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
          </td>
       </tr>
-      <tr style="border-bottom: 2px solid gray;">
+      <tr style="border-bottom: 2px solid black;">
          <td> "Impressionism"   </td>
          <td> Fitness = 98.82%  </td>
          <td> Fitness = 99.23%  </td>
@@ -291,9 +291,9 @@ This allows a human artist to use the number of triangles in order to find the r
          <td> <b> Basic (10k iters) </b> </td>
          <td> <b> Basic (560k iters) </b> </td>
       </tr>
-      <tr style="border-bottom: 2px solid gray;">
+      <tr style="border-bottom: 2px solid black;">
          <td style="width: 25%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
          </td>
          <td style="width: 25%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
@@ -302,7 +302,7 @@ This allows a human artist to use the number of triangles in order to find the r
             <video class="b-lazy" data-src="assets/produced/es-bitmap-basicfit-monalisa-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
          </td>
          <td style="width: 25%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-basicfit-monalisa-50-56k-iters-run-1-coalesce-1x1.png" style="margin: auto; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-basicfit-monalisa-50-56k-iters-run-1-coalesce-1x1.png" style="margin: auto; width: 95%;">
          </td>
       </tr>
    </table>
@@ -329,9 +329,9 @@ Furthermore, even allowing $56$ times more iterations for the basic algorithm do
          <td> <b> Evolution Strategy <br> (Non-gradient) </b> </td>
          <td> <b> Differentiable Renderer <br> (Gradient-based) </b> </td>
       </tr>
-      <tr style="border-bottom: 2px solid gray;">
+      <tr style="border-bottom: 2px solid black;">
          <td style="width: 33%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
          </td>
          <td style="width: 33%;border: 1px solid transparent;"> 
             <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-200-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
