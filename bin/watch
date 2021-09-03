@@ -2,7 +2,7 @@
 echo "Watching .md files for changes"
 ./bin/make
 
-fswatch . -e ".*" -i "\\.md$" | while read f; do
+fswatch . -e ".*" -i "\\.md$" -i "draft_header\\.html$" -i "draft_bib\\.html$" | while read f; do
   echo $f
   ./bin/make
 done

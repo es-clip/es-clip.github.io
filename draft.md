@@ -12,8 +12,73 @@ Minimalist art has also been explored in computer generated art. Schmidhuber <dt
 Similarly, genetic algorithms are a popular method applied to approximate images using simple shapes.
 As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See "Basic" in <span style="color:#FF6C00;">Figure: Compare choices of evolution algorithm</span> for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
 
+<div style="text-align: center;">
+   <table style="width: 100%;" cellspacing="0" cellpadding="0">
+      <tr>
+         <td style="width: 50%;border: 1px solid transparent;"> 
+            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
+         </td>
+         <td style="width: 50%;border: 1px solid transparent;"> 
+            <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
+         </td>
+      </tr>
+   </table>
+   
+   <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Our method fitting painting "Mona Lisa"</figcaption>
+   <figcaption style="text-align: left; padding-top: 0;">
+      Our Method leverages modern ES (PGPE with ClipUp), which 50 triangles and runs for 10,000 steps to fit the target image "Mona Lisa"' here. 
+      The target image is followed by the finally evolved results and the evolution process follows the target image.
+   </figcaption>
+   <!-- \label{fig:es-ours-mona-lisa} -->
+</div>
+
+
 With the recent resurgence of interest in evolution strategies (ES) in the machine learning community <dt-cite key="salimans2017evolution,ha2017evolving"></dt-cite>, in this work, we revisit the use of ES for creativity applications as an alternative to gradient-based methods. 
 For the image-approximation with shapes task, we find that modern ES algorithms offer large improvements in both quality and efficiency when compared to traditional genetic algorithms, and as we will also demonstrate, even comparable to state-of-the-art differentiable rendering methods <dt-cite key="laine2020modular"></dt-cite>.
+
+
+<div style="text-align: center;">
+   <table style="width: 100%;" cellspacing="0" cellpadding="0">
+      <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
+         <td> <b> Prompt </b> </td>
+         <td> <b> Evolved Results </b> </td>
+      </tr>
+      <tr style="border-bottom: 2px solid gray;">
+         <td style="width: 60%;border: 1px solid transparent;"> 
+            "Self"
+         </td>
+         <td style="width: 40%;border: 1px solid transparent;"> 
+            <video class="b-lazy" data-src="assets/produced/es-clip-[Self...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
+         </td>
+      </tr>
+      <tr style="border-bottom: 2px solid gray;">
+         <td style="width: 60%;border: 1px solid transparent;"> 
+            "Walt Disney World"
+         </td>
+         <td style="width: 40%;border: 1px solid transparent;"> 
+            <video class="b-lazy" data-src="assets/produced/es-clip-[Walt Disney World...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
+         </td>
+      </tr>
+      <tr style="border-bottom: 2px solid black;">
+         <td style="width: 60%;border: 1px solid transparent;"> 
+            "The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain View, California."
+         </td>
+         <td style="width: 40%;border: 1px solid transparent;"> 
+            <video class="b-lazy" data-src="assets/produced/es-clip-[The corporate headquarters complex of Go...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
+         </td>
+      </tr>
+   </table>
+   
+   <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: ES and CLIP fit the concept represented in text prompt</figcaption>
+   <figcaption style="text-align: left; padding-top: 0;">
+      ES and CLIP fit the concept represented in text prompt, using 50 triangles and running evolution for 2,000 steps. 
+      Each row shows the text prompt followed by the finally evolved results and the evolution process. 
+      We show exemplary prompts for 3 kinds of text, ranging from a single word ("Human"), a phrase ("Walt Disney Land"), and a long sentence (the last example).
+   </figcaption>
+   <!-- \label{fig:es-clip-examples} -->
+</div>
+
+
 We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP <dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
 We provide a reference implementation and interactive notebook demos of our approach so that it can be a useful tool in the computational artist's toolbox.
 
@@ -59,32 +124,12 @@ This would prevent the rendered canvas from overfitting and increase the stabili
 Second, we render the triangles on top of a background with a uniform distribution noise. Mathematically, this equals to modeling the uncertainty of parts in the canvas not covered by triangles with a max-entropy assumption, and using Monte Carlo method for approximation.
 Finally, we limit the maximal alpha value for each triangle to $0.1$, which prevents front triangles from (overly) shadowing the back ones.
 
-
 ## Fitting Concrete Target Image
 
-<div style="text-align: center;">
-   <table style="width: 100%;" cellspacing="0" cellpadding="0">
-      <tr>
-         <td style="width: 50%;border: 1px solid transparent;"> 
-            <img class="b-lazy b-loaded" src="assets/produced/es-bitmap-target-monalisa.png" style="margin: auto; width: 95%;">
-         </td>
-         <td style="width: 50%;border: 1px solid transparent;"> 
-            <video class="b-lazy" data-src="assets/produced/es-bitmap-fit-monalisa-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
-         </td>
-      </tr>
-   </table>
-   
-   <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Our method fitting painting "Mona Lisa"</figcaption>
-   <figcaption style="text-align: left; padding-top: 0;">
-      Our Method leverages modern ES (PGPE with ClipUp), which 50 triangles and runs for 10,000 steps to fit the target image "Mona Lisa"' here. 
-      The target image is followed by the finally evolved results and the evolution process follows the target image.
-   </figcaption>
-   <!-- \label{fig:es-ours-mona-lisa} -->
-</div>
 
 In this section, we show the performance of our proposed work on fitting a concrete target image.
 In doing so, the model takes the lower branch in the architecture of our method
-we show the result fitting the famous painting "Mona Lisa" with $50$ triangles and running evolution for $10,000$ steps in <span style="color:#FF6C00">Figure: Our method fitting painting "Mona Lisa"</span> above. 
+we show the result fitting the famous painting "Mona Lisa" with $50$ triangles and running evolution for $10,000$ steps in <span style="color:#FF6C00">Figure: Our method fitting painting "Mona Lisa"</span>  earlier in the text. 
 The results show a distinctive art style represented by well-placed triangles that care both fine-grained textures and large backgrounds. 
 The evolution process also demonstrates the coarse-to-fine adjustment of triangles' positions and colors.
 
@@ -116,7 +161,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
          </td>
       </tr>
       <tr style="border-bottom: 2px solid gray;">
-         <td> "Darwin"       </td>
+         <td> "Darwin"          </td>
          <td> Fitness = 96.82%  </td>
          <td> Fitness = 99.25%  </td>
          <td> Fitness = 99.08%  </td>
@@ -164,7 +209,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
          </td>
       </tr>
       <tr style="border-bottom: 2px solid gray;">
-         <td> "Anime Face"       </td>
+         <td> "Anime Face"      </td>
          <td> Fitness = 94.97%  </td>
          <td> Fitness = 98.17%  </td>
          <td> Fitness = 98.80%  </td>
@@ -212,7 +257,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
          </td>
       </tr>
       <tr style="border-bottom: 2px solid gray;">
-         <td> "Impressionism"       </td>
+         <td> "Impressionism"   </td>
          <td> Fitness = 98.82%  </td>
          <td> Fitness = 99.23%  </td>
          <td> Fitness = 99.34%  </td>
@@ -319,56 +364,7 @@ In doing so, the model takes the upper branch in <span style="color:#FF6C00">Fig
 Formally, the parameter space remains the same, but the fitness is calculated as the cosine distance between the text prompt and the rendered canvas, both encoded by CLIP. 
 Since the model is given more freedom to decide what to paint, this problem is arguably a much harder yet more interesting problem than fitting concrete images in the previous section.
 
-<div style="text-align: center;">
-   <table style="width: 100%;" cellspacing="0" cellpadding="0">
-      <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
-         <td> <b> Prompt </b> </td>
-         <td> <b> Evolved Results </b> </td>
-      </tr>
-      <tr style="border-bottom: 2px solid gray;">
-         <td style="width: 60%;border: 1px solid transparent;"> 
-            "Self"
-         </td>
-         <td style="width: 40%;border: 1px solid transparent;"> 
-            <video class="b-lazy" data-src="assets/produced/es-clip-[Self...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
-         </td>
-      </tr>
-      <tr style="border-bottom: 2px solid gray;">
-         <td style="width: 60%;border: 1px solid transparent;"> 
-            "Human"
-         </td>
-         <td style="width: 40%;border: 1px solid transparent;"> 
-            <video class="b-lazy" data-src="assets/produced/es-clip-[Human...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
-         </td>
-      </tr>
-      <tr style="border-bottom: 2px solid gray;">
-         <td style="width: 60%;border: 1px solid transparent;"> 
-            "Walt Disney World"
-         </td>
-         <td style="width: 40%;border: 1px solid transparent;"> 
-            <video class="b-lazy" data-src="assets/produced/es-clip-[Walt Disney World...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
-         </td>
-      </tr>
-      <tr style="border-bottom: 2px solid black;">
-         <td style="width: 60%;border: 1px solid transparent;"> 
-            "The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain View, California."
-         </td>
-         <td style="width: 40%;border: 1px solid transparent;"> 
-            <video class="b-lazy" data-src="assets/produced/es-clip-[The corporate headquarters complex of Go...]-50-run-1.video.mp4" type="video/mp4" autoplay muted playsinline loop style="width: 95%;" />
-         </td>
-      </tr>
-   </table>
-   
-   <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: ES and CLIP fit the concept represented in text prompt</figcaption>
-   <figcaption style="text-align: left; padding-top: 0;">
-      ES and CLIP fit the concept represented in text prompt, using 50 triangles and running evolution for 2,000 steps. 
-      Each row shows the text prompt followed by the finally evolved results and the evolution process. 
-      We show exemplary prompts for 3 kinds of text, ranging from a single word ("Self" and "Human"), a phrase ("Walt Disney Land"), and a long sentence ("The corporate headquarters complex of Google located at 1600 Amphitheatre Parkway in Mountain View, California.").
-   </figcaption>
-   <!-- \label{fig:es-clip-examples} -->
-</div>
-
-In <span style="color:#FF6C00">Figure: ES and CLIP fit the concept represented in text prompt</span> above,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps. 
+In <span style="color:#FF6C00">Figure: ES and CLIP fit the concept represented in text prompt</span> earlier in the text,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps. 
 Our method could handle text prompts ranging from a single word to a phrase, and finally, to a long sentence, even though the task itself is arguably more challenging than the previous one.
 The results show a creative art concept that is abstract, not resembling a particular image, yet correlated with humans' interpretation of the text.
 The evolution process also demonstrates iterative adjustment, such as the human shape in the first two examples, the shape of castles in Disney World, as well as in the final example, the cooperate-themed headquarters.
