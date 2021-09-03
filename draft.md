@@ -87,7 +87,7 @@ We provide a reference implementation and interactive notebook demos of our appr
 ## Modern Evolution Strategies based Creativity
 
 <div style="text-align: center;">
-   <img class="b-lazy b-loaded" src="assets/manual/pg_0002.png" style="display: block; margin: auto; width: 100%;">
+   <img class="b-lazy b-loaded" src="assets/manual/pg_0002.jpg" style="display: block; margin: auto; width: 100%;">
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Our proposed method synthesizes painting by placing transparent triangles using Evolution Strategy (ES). 
