@@ -91,7 +91,7 @@ We provide a reference implementation and interactive notebook demos of our appr
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Our proposed method synthesizes painting by placing transparent triangles using Evolution Strategy (ES). 
-      The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using as the fitness the loss measuring how well the canvas fits a target image or an concept in the form of a text prompt.
+      The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using as the fitness the loss, which measures how well the canvas fits a target image or an concept in the form of a text prompt.
       The fitness, in turn, guides the evolution process to find better parameters.
    </figcaption>
    <!-- \label{fig:architecture} -->
@@ -366,7 +366,8 @@ In doing so, the model takes the upper branch in <span style="color:#FF6C00">Fig
 Formally, the parameter space remains the same, but the fitness is calculated as the cosine distance between the text prompt and the rendered canvas, both encoded by CLIP. 
 Since the model is given more freedom to decide what to paint, this problem is arguably a much harder yet more interesting problem than fitting concrete images in the previous section.
 
-In <span style="color:#FF6C00">Figure: ES and CLIP fit the concept represented in text prompt</span> earlier in the text,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps. 
+In <span style="color:#FF6C00">Figure: ES and CLIP fit the concept represented in text prompt</span> earlier in the text,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps.
+We found that unlike fitting a concrete images, $2,000$ steps is enough for fitting a concept to converge.  
 Our method could handle text prompts ranging from a single word to a phrase, and finally, to a long sentence, even though the task itself is arguably more challenging than the previous one.
 The results show a creative art concept that is abstract, not resembling a particular image, yet correlated with humans' interpretation of the text.
 The evolution process also demonstrates iterative adjustment, such as the human shape in the first two examples, the shape of castles in Disney World, as well as in the final example, the cooperate-themed headquarters.
@@ -687,6 +688,8 @@ ours produces more clear abstraction and clear boundaries between shapes and obj
 More interestingly, ours represents a distinctive art style that focuses on objects similar to the minimalism approach, while the differentiable renderer tends to spread out the triangles for a more impressionism-like style.
 Like the counterpart comparison in fitting a concrete image, we argue that such results are intrinsically rooted in the optimization mechanism, and our proposed method leads to a unique art style through our design choices.
 
+______
+
 ## Related Works and Backgrounds of our Work
 
 ### Realted Works
@@ -730,6 +733,9 @@ Although all these methods use the same pre-trained CLIP model for guidance, the
 In this work, we revisit evolutionary algorithms for computational creativity by proposing to combine modern evolution strategies (ES) algorithms with the drawing primitives of triangles inspired by the minimalism art style. 
 Our proposed method offers considerable improvements in both quality and efficiency compared to traditional genetic algorithms and is comparable to gradient-based methods.
 Furthermore, we demonstrate that the ES algorithm could produce diverse, distinct geometric abstractions aligned with human interpretation of language and images.
+Our finds suggests that ES method produce very different and sometimes better results compared to gradient based methods, arguably due to the intrinsical behavior of the optimization mechanism. 
+However it remains an open problem to understand how in general setting ES method compares with gradient methods.
+We expect future works investigate further into broader spectrum of art forms beyond the minimalist we explored in this work.
 
 Our dealing with evolutionary algorithms provides an insight into a different paradigm that can be applied to computational creativity.
 Widely adopted gradient-based methods are fine-tuned for specific domains, i.e., diff rendering for edges, parameterized shapes, or data-driven techniques for rendering better textures. Each of the applications requires tunes and tweaks that are domain-specific and are hard to transfer.
