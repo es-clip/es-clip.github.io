@@ -13,7 +13,7 @@ The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, populariz
 
 Staring from early 20th-century in the wider context of Modernism <dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
 The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
-This naturally develops into the Geometric abstraction <dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Piet Mondrian and Wassily Kandinsky represented the world using composed primitives that are either purely geometric and elementary.
+This naturally develops into the Geometric abstraction <dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Wassily Kandinsky and Piet Mondrian represented the world using composed primitives that are either purely geometric and elementary.
 The impact is far-reaching since around the second half of the 20th-century.
 The use of simple geometry can be seen as one of stylistic similarities found in the Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite>, which rejected the traditional view and instead focus more on the inner psyche that are more subconscious.
 It also helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. 
