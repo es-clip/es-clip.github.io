@@ -7,11 +7,28 @@ ______
 
 ## Introduction
 
+<!--
 The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists in the early 20th-century, abandoned the depiction of objects from tradition rules of perspective. Instead, objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. The use of simple geometry helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. This minimalist approach is also evident later in Picasso's line drawings <dt-cite key="stein1984picasso,picasso_fearless"></dt-cite>.
+-->
 
+Staring from early 20th-century in the wider context of Modernism <dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
+The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
+This naturally develops into the Geometric abstraction <dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Piet Mondrian and Wassily Kandinsky represented the world using composed primitives that are either purely geometric and elementary.
+The impact is far-reaching since around the second half of the 20th-century.
+The use of simple geometry can be seen as one of stylistic similarities found in the Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite>, which rejected the traditional view and instead focus more on the inner psyche that are more subconscious.
+It also helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. 
+
+<!--
 The idea of minimalist art has also been explored in computer generated art. Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
 Similarly, genetic algorithms are a popular method applied to approximate images using simple shapes.
+-->
+
+The idea of minimalist art has also been explored in computer art with a root in mathematical art <dt-cite key="malkevitch2003mathematics"></dt-cite>.
+Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
+Similarly, Algorithmic art <dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
+In a border sense, Algorithmic art could be said to include Genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
 As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
+Interestingly, since these methods are iterative, they also echo Process art <dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.
 
 <div style="text-align: center;">
    <a name="fig-es-ours-mona-lisa"></a>
@@ -31,7 +48,6 @@ As one example, a basic genetic algorithm using evolution has been proposed <dt-
       The target image is followed by the finally evolved results and the evolution process follows the target image.
    </figcaption>
 </div>
-
 
 With the recent resurgence of interest in evolution strategies (ES) in the machine learning community <dt-cite key="salimans2017evolution,ha2017evolving"></dt-cite>, in this work, we revisit the use of ES for creativity applications as an alternative to gradient-based methods. 
 For the image-approximation with shapes task, we find that modern ES algorithms offer large improvements in both quality and efficiency when compared to traditional genetic algorithms, and as we will also demonstrate, even comparable to state-of-the-art differentiable rendering methods <dt-cite key="laine2020modular"></dt-cite>.
@@ -78,7 +94,8 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
 
 
 We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP <dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
-We provide a reference implementation and interactive notebook demos of our approach so that it can be a useful tool in the computational artist's toolbox.
+Interestingly, the results produced by our method resemble Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite> and Minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
+We provide a reference code implementation of our approach so that it can be a useful tool in the computational artist's toolbox.
 
 ## Modern Evolution Strategies based Creativity
 

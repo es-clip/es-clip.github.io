@@ -277,10 +277,25 @@
 <p>In this work, we revisit the use of evolutionary algorithms for computational creativity. We find that modern evolution strategies (ES) algorithms,  when tasked with the placement of shapes, offer large improvements in both quality and efficiency compared to traditional genetic algorithms, and even comparable to gradient-based methods. We demonstrate that ES is also well suited at optimizing the placement of shapes to fit the CLIP model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.</p>
 <hr>
 <h2>Introduction</h2>
-<p>The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists in the early 20th-century, abandoned the depiction of objects from tradition rules of perspective. Instead, objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. The use of simple geometry helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. This minimalist approach is also evident later in Picasso's line drawings <dt-cite key="stein1984picasso,picasso_fearless"></dt-cite>.</p>
-<p>The idea of minimalist art has also been explored in computer generated art. Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
+<!--
+The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists in the early 20th-century, abandoned the depiction of objects from tradition rules of perspective. Instead, objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. The use of simple geometry helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. This minimalist approach is also evident later in Picasso's line drawings <dt-cite key="stein1984picasso,picasso_fearless"></dt-cite>.
+-->
+<p>Staring from early 20th-century in the wider context of Modernism <dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
+The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations.
+This naturally develops into the Geometric abstraction <dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Piet Mondrian and Wassily Kandinsky represented the world using composed primitives that are either purely geometric and elementary.
+The impact is far-reaching since around the second half of the 20th-century.
+The use of simple geometry can be seen as one of stylistic similarities found in the Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite>, which rejected the traditional view and instead focus more on the inner psyche that are more subconscious.
+It also helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>.</p>
+<!--
+The idea of minimalist art has also been explored in computer generated art. Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
 Similarly, genetic algorithms are a popular method applied to approximate images using simple shapes.
-As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See &quot;Basic&quot; in <a href="#fig-es-ours-vs-basic">Figure: Compare choices of evolution algorithm</a> for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.</p>
+-->
+<p>The idea of minimalist art has also been explored in computer art with a root in mathematical art <dt-cite key="malkevitch2003mathematics"></dt-cite>.
+Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
+Similarly, Algorithmic art <dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
+In a border sense, Algorithmic art could be said to include Genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
+As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See &quot;Basic&quot; in <a href="#fig-es-ours-vs-basic">Figure: Compare choices of evolution algorithm</a> for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
+Interestingly, since these methods are iterative, they also echo Process art <dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.</p>
 <div style="text-align: center;">
    <a name="fig-es-ours-mona-lisa"></a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
@@ -341,7 +356,8 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
    </figcaption>
 </div>
 <p>We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP <dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
-We provide a reference implementation and interactive notebook demos of our approach so that it can be a useful tool in the computational artist's toolbox.</p>
+Interestingly, the results produced by our method resemble Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite> and Minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
+We provide a reference code implementation of our approach so that it can be a useful tool in the computational artist's toolbox.</p>
 <h2>Modern Evolution Strategies based Creativity</h2>
 <div style="text-align: center;">
    <a name="fig-architecture"></a>
@@ -1424,6 +1440,62 @@ We specially thank <a href="https://aixile.github.io/">Yanghua Jin</a> for his k
     year={1968},
     publisher={Elsevier},
     url={https://www.sciencedirect.com/science/article/abs/pii/0022519368900799},
+  }
+
+  @misc{dabrowski2004geometric,
+    author = {Magdalena Dabrowski},
+    title = {Geometric Abstraction},
+    year = 2004,
+    url = {https://www.metmuseum.org/toah/hd/geab/hd_geab.htm},
+    urldate = {2004-10-1}
+  }
+
+  @misc{wolf2012hard,
+    author = {Justin Wolf},
+    title = {Hard-edge Painting},
+    year = 2012,
+    url = {https://www.theartstory.org/movement/hard-edge-painting/},
+    urldate = {2012-01-21}
+  }
+
+  @misc{paul2004abstract,
+    author = {Stella Paul},
+    title = {Abstract Expressionism},
+    year = 2004,
+    url = {https://www.metmuseum.org/toah/hd/abex/hd_abex.htm},
+    urldate = {2004-10-1}
+  }
+
+  @misc{kuiper2021modernism,
+    author = {Kuiper, Kathleen},
+    title = {Modernism},
+    year = 2021,
+    url = {https://www.britannica.com/art/Modernism-art},
+    urldate = {2012-08-27}
+  }
+
+  @misc{malkevitch2003mathematics,
+    author = {Joseph Malkevitchn},
+    title = {Mathematics and Art},
+    year = 2003,
+    url = {https://www.ams.org/publicoutreach/feature-column/fcarc-art1},
+    urldate = {2003-04-01}
+  }
+
+  @misc{tate2021process,
+    author = {Tate},
+    title = {Process Art},
+    year = 2021,
+    url = {https://www.tate.org.uk/art/art-terms/p/process-art},
+    urldate = {2021-01-01}
+  }
+
+  @misc{verostko1994algorithmic,
+    author = {Roman Verostko},
+    title = {Algorithmic Art},
+    year = 1994,
+    url = {http://www.verostko.com/algorithm.html},
+    urldate = {1994-01-01}
   }
 }
 </script>
