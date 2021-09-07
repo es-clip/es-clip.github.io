@@ -178,8 +178,8 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
          <td> "Darwin"          </td>
          <td> Fitness = 96.82%  </td>
          <td> Fitness = 99.25%  </td>
-         <td> Fitness = 99.08%  </td>
-         <td> Fitness = 99.25%  </td>
+         <td> Fitness = 99.51%  </td>
+         <td> Fitness = 99.75%  </td>
       </tr>
       <tr>
          <td style="width: 20%;border: 1px solid transparent;"> 
