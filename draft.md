@@ -353,7 +353,7 @@ Furthermore, even allowing $56$ times more iterations for the basic algorithm do
    </table>
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Evolution strategies vs. differentiable renderer</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting text prompt through CLIP using 200 triangles. 
+      Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting target image with $200$ triangles. 
    </figcaption>
 </div>
 
@@ -631,7 +631,7 @@ We observe that while the model could comfortably handle at least up to $50$ tri
 
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Qualitative results from ES and CLIP fitting several text prompt with different numbers of triangles</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Qualitative results from ES and CLIP fitting several text prompt with 50 triangles, each running for 2,000 steps. The text prompt selection follows that of the prvious Figure.
+      Qualitative results from ES and CLIP fitting several text prompt with 50 triangles, each running for 2,000 steps. The text prompt selection follows that of the previous Figure.
        Here the results from 4 individual runs are shown. 
    </figcaption>
 </div>
