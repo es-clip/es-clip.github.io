@@ -353,7 +353,7 @@ Furthermore, even allowing $56$ times more iterations for the basic algorithm do
    </table>
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Evolution strategies vs. differentiable renderer</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting target image with $200$ triangles. 
+      Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting target image with 200 triangles. 
    </figcaption>
 </div>
 
