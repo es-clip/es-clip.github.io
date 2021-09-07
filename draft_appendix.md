@@ -1,6 +1,6 @@
 ## Acknowledgements
 
-We thank [Jerry Li](https://jerrylijiaming.com/), [Yujin Tang](https://twitter.com/yujin_tang), [Yanghua Jin](https://aixile.github.io/), [Jesse Engel](https://twitter.com/jesseengel), [Yifu Zhao](https://www.linkedin.com/in/yifuzhao) for their valuable comments and suggestions.
+We thank [Toru Lin](https://toruowo.github.io/), [Jerry Li](https://jerrylijiaming.com/), [Yujin Tang](https://twitter.com/yujin_tang), [Yanghua Jin](https://aixile.github.io/), [Jesse Engel](https://twitter.com/jesseengel), [Yifu Zhao](https://www.linkedin.com/in/yifuzhao) for their valuable comments and suggestions.
 We specially thank [Yanghua Jin](https://aixile.github.io/) for his kind help with nvdiffrast. 
 
 Any errors here are our own and do not reflect opinions of our proofreaders and colleagues. If you see mistakes or want to suggest changes, feel free to contribute feedback by participating in the [discussion forum](https://github.com/es-clip/es-clip.github.io/issues) for this article.

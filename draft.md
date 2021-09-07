@@ -9,12 +9,12 @@ ______
 
 The Cubism art movement <dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists in the early 20th-century, abandoned the depiction of objects from tradition rules of perspective. Instead, objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. The use of simple geometry helped shaped the minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite> and minimalist architecture movements, in which everything is stripped down to its essential quality to achieve simplicity <dt-cite key="bertoni2002minimalist"></dt-cite>. This minimalist approach is also evident later in Picasso's line drawings <dt-cite key="stein1984picasso,picasso_fearless"></dt-cite>.
 
-
-Minimalist art has also been explored in computer generated art. Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
+The idea of minimalist art has also been explored in computer generated art. Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
 Similarly, genetic algorithms are a popular method applied to approximate images using simple shapes.
-As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See "Basic" in <span style="color:#FF6C00;">Figure: Compare choices of evolution algorithm</span> for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
+As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
 
 <div style="text-align: center;">
+   <a name="fig-es-ours-mona-lisa"></a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr>
          <td style="width: 50%;border: 1px solid transparent;"> 
@@ -25,21 +25,19 @@ As one example, a basic genetic algorithm using evolution has been proposed <dt-
          </td>
       </tr>
    </table>
-   
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Our method fitting painting "Mona Lisa"</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Our Method leverages modern ES (PGPE with ClipUp), which 50 triangles and runs for 10,000 steps to fit the target image "Mona Lisa"' here. 
       The target image is followed by the finally evolved results and the evolution process follows the target image.
    </figcaption>
-   <!-- \label{fig:es-ours-mona-lisa} -->
 </div>
 
 
 With the recent resurgence of interest in evolution strategies (ES) in the machine learning community <dt-cite key="salimans2017evolution,ha2017evolving"></dt-cite>, in this work, we revisit the use of ES for creativity applications as an alternative to gradient-based methods. 
 For the image-approximation with shapes task, we find that modern ES algorithms offer large improvements in both quality and efficiency when compared to traditional genetic algorithms, and as we will also demonstrate, even comparable to state-of-the-art differentiable rendering methods <dt-cite key="laine2020modular"></dt-cite>.
 
-
 <div style="text-align: center;">
+   <a name="fig-es-clip-examples"> </a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Prompt </b> </td>
@@ -70,14 +68,12 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
          </td>
       </tr>
    </table>
-   
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: ES and CLIP fit the concept represented in text prompt</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       ES and CLIP fit the concept represented in text prompt, using 50 triangles and running evolution for 2,000 steps. 
       Each row shows the text prompt followed by the finally evolved results and the evolution process. 
       We show exemplary prompts for 3 kinds of text, ranging from a single word ("Self"), a phrase ("Walt Disney Land"), and a long sentence (the last example).
    </figcaption>
-   <!-- \label{fig:es-clip-examples} -->
 </div>
 
 
@@ -87,6 +83,7 @@ We provide a reference implementation and interactive notebook demos of our appr
 ## Modern Evolution Strategies based Creativity
 
 <div style="text-align: center;">
+   <a name="fig-architecture"></a>
    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/manual/pg_0002.jpg" style="display: block; margin: auto; width: 100%;">
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
@@ -94,10 +91,9 @@ We provide a reference implementation and interactive notebook demos of our appr
       The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using as the fitness the loss, which measures how well the canvas fits a target image or an concept in the form of a text prompt.
       The fitness, in turn, guides the evolution process to find better parameters.
    </figcaption>
-   <!-- \label{fig:architecture} -->
 </div>
 
-The architecture of our proposed is shown in <span style="color:#FF6C00">Figure: The architecture of our method</span> above.
+The architecture of our proposed is shown in [Figure: The architecture of our method](#fig-architecture) above.
 Our proposed method synthesizes painting by placing transparent triangles using evolution strategy (ES).
 Overall, we can represent a configuration of triangles in a parameter space which composes of positions and colors of triangles,
 render such configuration onto a canvas,
@@ -114,7 +110,7 @@ In the ES, we update all parameters and use a fixed hyper-parameter, the number 
 Note that $N$ is better understood as the upper bound of number of triangles to use: although $N$ is fixed, the algorithm is still capable of effectively using "fewer" triangles by making unwanted ones transparent.
 
 As the ES is orthogonal to the concrete fitness evaluation, we are left with many free choices regarding what counts as fitting.
-Particularly, we consider two kinds of fitness, namely, fitting a concrete image and fitting a concept (the lower branch and the upper branch in <span style="color:#FF6C00">Figure: The architecture of our method</span> above respectively).
+Particularly, we consider two kinds of fitness, namely, fitting a concrete image and fitting a concept (the lower branch and the upper branch in [Figure: The architecture of our method](#fig-architecture) above respectively).
 Fitting a concrete image is straightforward, where we can simply use the pixel-wise L2 loss between the rendered canvas and the target image as the fitness.
 Fitting a concept requires more elaboration. We represent the concept as a text prompt and embed the text prompt using the text encoder in CLIP <dt-cite key="radford2021learning"></dt-cite>. 
 Then we embed the rendered canvas using the image encoder also available in CLIP. Since the CLIP models are trained so that both embedded images and texts are comparable under Cosine distance for similarity, we use such distance as the fitness.
@@ -128,15 +124,14 @@ Finally, we limit the maximal alpha value for each triangle to $0.1$, which prev
 
 ## Fitting Concrete Target Image
 
-
 In this section, we show the performance of our proposed work on fitting a concrete target image.
 In doing so, the model takes the lower branch in the architecture of our method
-we show the result fitting the famous painting "Mona Lisa" with $50$ triangles and running evolution for $10,000$ steps in <span style="color:#FF6C00">Figure: Our method fitting painting "Mona Lisa"</span>  earlier in the text. 
+we show the result fitting the famous painting "Mona Lisa" with $50$ triangles and running evolution for $10,000$ steps in [Figure: Our method fitting painting "Mona Lisa"](#fig-es-ours-mona-lisa) earlier in the text. 
 The results show a distinctive art style represented by well-placed triangles that care both fine-grained textures and large backgrounds. 
 The evolution process also demonstrates the coarse-to-fine adjustment of triangles' positions and colors.
 
-
 <div style="text-align: center;">
+   <a name="fig-es-ours-different-n-triangles"></a>
    <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Target Image </b> </td>
@@ -266,24 +261,23 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
          <td> Fitness = 99.48%  </td>
       </tr>
    </table>
-
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Qualitative and quantitative results from fitting target images with different number of triangles</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Qualitative and quantitative results from fitting several targets with 10, 25, 50, and 200 triangles, each running for 10,000 steps.
       Images credits: Darwin, Mona Lisa, Velociraptor are from <dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Anime Face is generated by Waifu Labs <dt-cite key="sizigi2019waifu"></dt-cite>. 
       Landscape is from Wikipedia<dt-cite key="wiki:landscape"></dt-cite>. Impressionism is <em>A May Morning in Moret</em> by Alfred Sisley, collected by <dt-cite key="gonsalves2021impressionist"></dt-cite>
    </figcaption>
-   <!-- \label{fig:es-ours-different-n-triangles} -->
 </div>
 
 <b>Number of triangles and parameters</b>.
 Our proposed pipeline is able to fit any target images and could handle a wide range of number of parameters, since PGPE runs efficiently, i.e., linear to the number of parameters. 
 This is demonstrated by applying our method to fit several target images with $10$, $25$, $50$, $200$ triangles, which corresponds to $100$, $250$, $500$ and $2000$ parameters respectively.
-As shown in  <span style="color:#FF6C00">Figure: Qualitative and quantitative results from fitting target images with different number of triangles</span> above,
+As shown in [Figure: Qualitative and quantitative results from fitting target images with different number of triangles](#fig-es-ours-different-n-triangles) above,
 our proposed pipeline works well for a wide range of target images, and the ES algorithm is capable of using the number of triangles as a "computational budget" where extra triangles could always be utilized for gaining in fitness. 
 This allows a human artist to use the number of triangles in order to find the right balance between abstractness and details in the produced art.
 
 <div style="text-align: center;">
+   <a name="fig-es-ours-vs-basic"></a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Target Image </b> </td>
@@ -306,23 +300,22 @@ This allows a human artist to use the number of triangles in order to find the r
          </td>
       </tr>
    </table>
-   
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Compare choices of evolution algorithm</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Compare choices of evolution algorithm: Ours (PGPE with ClipUp) vs. a basic evolution algorithm (mutation with simulated Annealing) <dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Both setting fits 50 triangles and all choices except for the evolution algorithm are the same. 
       We show the evolved result and evolution process of ours and the basic algorithm at the end of 10,000 iterations, and the result of the basic algorithm after running <em>56</em> times more iterations.
    </figcaption>
-   <!-- \label{fig:es-ours-vs-basic} -->
 </div>
 
 
 <b>Choice of ES Algorithm</b>.
 We compare two choices of evolution algorithm: ours, which uses the recent PGPE with ClipUp, and a basic, traditional one, which consists of mutation and simulated annealing adopted earlier <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite>. 
-As shown in <span style="color:#FF6C00;">Figure: Compare choices of evolution algorithm</span> above, our choice of more recent algorithms leads to better results than the basic one under the same parameter budget.
+As shown in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) above, our choice of more recent algorithms leads to better results than the basic one under the same parameter budget.
 Subjectively, our final results are more visually closer to the target image with a smoother evolution process, and quantitatively, our method leads to much better fitness ($99.62\%$ vs. $97.23\%$). 
 Furthermore, even allowing $56$ times more iterations for the basic algorithm does not lead to results better than ours.
 
 <div style="text-align: center;">
+   <a name="fig-es-vs-diff"> </a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Target Image </b> </td>
@@ -341,19 +334,18 @@ Furthermore, even allowing $56$ times more iterations for the basic algorithm do
          </td>
       </tr>
    </table>
-   
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Evolution strategies vs. differentiable renderer</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting text prompt through CLIP using 200 triangles. 
    </figcaption>
-   <!-- \label{fig:es-vs-diff} -->
 </div>
+
 
 <b>Comparison with Gradient-based Optimization</b>.
 While our proposed approach is ES-based, it is interesting to investigate how it compares to gradient-based optimization since the latter is commonly adopted recently .
 Therefore we conduct a gradient-based setup by implementing rendering of composed triangles using nvdiffrast <dt-cite key="laine2020modular"></dt-cite>, a point-sampling-based differentiable renderer.
 We use the same processing as does our ES approach.
-As shown in <span style="color:#FF6C00">Figure: Evolution strategies vs. differentiable renderer</span> above, our proposed ES-based method can achieve similar yet slightly higher fitness than results compared with the gradient-optimized differentiable renderer.
+As shown in [Figure: Evolution strategies vs. differentiable renderer](#fig-es-vs-diff) above, our proposed ES-based method can achieve similar yet slightly higher fitness than results compared with the gradient-optimized differentiable renderer.
 Furthermore and perhaps more interestingly, two methods produce artworks with different styles: 
 our proposed method can adaptive allocating large triangles for background and small ones for detailed textures, 
 whereas the differentiable renderer tends to introduce textures unseen in the target image (especially in the background). 
@@ -362,20 +354,19 @@ We argue that due to the difference in the optimization mechanism, our method fo
 ## Fitting Abstract Concept with CLIP
 
 In this section, we show the performance of our method configured to fit an abstract concept represented by language. 
-In doing so, the model takes the upper branch in <span style="color:#FF6C00">Figure: The architecture of our method</span> above.
+In doing so, the model takes the upper branch in [Figure: The architecture of our method](#fig-architecture) above.
 Formally, the parameter space remains the same, but the fitness is calculated as the cosine distance between the text prompt and the rendered canvas, both encoded by CLIP. 
 Since the model is given more freedom to decide what to paint, this problem is arguably a much harder yet more interesting problem than fitting concrete images in the previous section.
 
-In <span style="color:#FF6C00">Figure: ES and CLIP fit the concept represented in text prompt</span> earlier in the text,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps.
+In [Figure: ES and CLIP fit the concept represented in text prompt](#fig-es-clip-examples) earlier in the text,  we show the evolution result and process of fitting abstract concept represented as text prompt, using 50 triangles and running evolution for $2,000$ steps.
 We found that unlike fitting a concrete images, $2,000$ steps is enough for fitting a concept to converge.  
 Our method could handle text prompts ranging from a single word to a phrase, and finally, to a long sentence, even though the task itself is arguably more challenging than the previous one.
 The results show a creative art concept that is abstract, not resembling a particular image, yet correlated with humans' interpretation of the text.
 The evolution process also demonstrates iterative adjustment, such as the human shape in the first two examples, the shape of castles in Disney World, as well as in the final example, the cooperate-themed headquarters.
 Also, compared to fitting concrete images in the previous section, our method cares more about the placement of triangles.
 
-
-
 <div style="text-align: center;">
+   <a name="fig-es-clip-different-n-triangles"> </a>
    <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Prompt </b> </td>
@@ -497,18 +488,18 @@ Also, compared to fitting concrete images in the previous section, our method ca
       Qualitative results from ES and CLIP fitting several text prompt with 10,25,50, and 200 triangles, each running for 2,000 steps. 
       We show exemplary prompts for three kinds of text, ranging from a single word ("Self" and "Human"), a phrase ("Walt Disney Land" and "A picture of Tokyo"), and a long sentence (last two examples). 
    </figcaption>
-   <!-- \label{fig:es-clip-different-n-triangles} -->
 </div>
 
 <b>Number of triangles and parameters</b>.
 Like fitting a concrete image, we can also fit an abstract concept with a wide range of number of parameters since the PGPE algorithm and the way we represent canvas remains the same.
-In <span style="color:#FF6C00">Figure: Qualitative results from ES and CLIP fitting several text prompt with different numbers of triangles</span> above, we apply our method to fit several concept (text prompt) with $10$, $25$, $50$, $200$ triangles, which corresponds to $100$, $250$, $500$ and $2000$ parameters respectively.
+In [Figure: Qualitative results from ES and CLIP fitting several text prompt with different numbers of triangles](#fig-es-clip-different-n-triangles) above, we apply our method to fit several concept (text prompt) with $10$, $25$, $50$, $200$ triangles, which corresponds to $100$, $250$, $500$ and $2000$ parameters respectively.
 It is shown that our proposed pipeline is capable of leveraging the number of triangles as a "budget for fitting" to balance between the details and the level of abstraction. 
 Like in the previous task, this allows a human artist to balance the abstractness in the produced art.
 
 We observe that while the model could comfortably handle at least up to $50$ triangles, more triangles ($200$) sometimes poses challenges: for example, with $200$ triangles, "corporate headquarters ..." gets a better result while "a picture of Tokyo" leads to a poor one. This may be due to the difficulties composing overly shadowed triangles, and we leave it for future study. 
 
 <div style="text-align: center;">
+   <a name="fig-es-clip-multiple-runs"> </a>
    <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Prompt </b> </td>
@@ -626,17 +617,17 @@ We observe that while the model could comfortably handle at least up to $50$ tri
       Qualitative results from ES and CLIP fitting several text prompt with 50 triangles, each running for 2,000 steps. The text prompt selection follows that of the prvious Figure.
        Here the results from 4 individual runs are shown. 
    </figcaption>
-   <!-- \label{fig:es-clip-multiple-runs} -->
 </div>
 
 <b>Multiple Runs</b>.
 Since the target is an abstract concept rather than a concrete image, our method is given much freedom in arranging the configuration of triangles, which means random initialization and noise in the optimization can lead to drastically different solutions. 
-In <span style="color:#FF6C00">Figure: Qualitative results from ES and CLIP fitting several text prompt with different numbers of triangles</span> above , we show 4 separate runs of our method on several text prompts, each using $50$ triangles with $2,000$ iterations, which is the same as previous examples.
+In [Figure: Qualitative results from ES and CLIP fitting several text prompt with different numbers of triangles](#fig-es-clip-multiple-runs) above , we show 4 separate runs of our method on several text prompts, each using $50$ triangles with $2,000$ iterations, which is the same as previous examples.
 As shown, our method creates distinctive abstractions aligned with human interpretation of language while being capable of producing diverse results from the same text prompt.
 This, again, is a desired property for computer-assisted art creation, where human creators can be put "in the loop", not only poking around the text prompt but also picking the from multiple candidates produced by our method.
 
 
 <div style="text-align: center;">
+   <a name="fig-es-clip-vs-diff-clip"></a>
    <table style="width: 100%;" cellspacing="0" cellpadding="0">
       <tr style="border-top: 2px solid black; border-bottom: 2px solid gray;">
          <td> <b> Prompt </b> </td>
@@ -671,7 +662,6 @@ This, again, is a desired property for computer-assisted art creation, where hum
    <figcaption style="text-align: left; padding-top: 0;">
       Evolution Strategies (non-gradient method) v.s.  Differentiable renderer (gradient-based method) with fitting text with CLIP. Both settings are fitting 200 triangles to the target images.
    </figcaption>
-   <!-- \label{fig:es-vs-diff} -->
 </div>
 
 <b>Comparison with Gradient-based Optimization</b>.
@@ -683,9 +673,9 @@ Like fitting a target image, we implement the rendering process of composing tri
 In the forward pass, we render the canvas from parameters, feed the canvas to CLIP image encoder, and use Cosine distance between encoded image and encoded text prompt as a loss. Then we back-propagate all the way til the parameters of triangles to allow gradient-based optimization.
 We use the same processing as does our ES approach.
 
-As shown in <span style="color:#FF6C00">Figure: Evolution strategies vs. differentiable renderer for CLIP</span>, while both our ES method and the differentiable method produce images that are aligned with human interpretation of the text prompt,
+As shown in [Figure: Evolution strategies vs. differentiable renderer for CLIP](#fig-es-clip-vs-diff-clip), while both our ES method and the differentiable method produce images that are aligned with human interpretation of the text prompt,
 ours produces more clear abstraction and clear boundaries between shapes and objects.
-More interestingly, ours represents a distinctive art style that focuses on objects similar to the minimalism approach, while the differentiable renderer tends to spread out the triangles for a more impressionism-like style.
+More interestingly, since ours represents an art style closely resembling abstract expressionism art, the difference between ours and the differentiable rendered is similar to that between post-impressionism and impressionism, where bolder geometric forms and colors are used.
 Like the counterpart comparison in fitting a concrete image, we argue that such results are intrinsically rooted in the optimization mechanism, and our proposed method leads to a unique art style through our design choices.
 
 ______
