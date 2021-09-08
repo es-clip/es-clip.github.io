@@ -97,7 +97,7 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
 
 We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP <dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
 Interestingly, the results produced by our method resemble Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite> and Minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
-We provide a reference code implementation on <https://github.com/es-clip/es-clip-code> of our approach so that it can be a useful tool in the computational artist's toolbox.
+We will provide a reference code implementation of our approach so that it can be a useful tool in the computational artist's toolbox.
 
 ## Modern Evolution Strategies based Creativity
 
