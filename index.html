@@ -246,6 +246,7 @@
         Here, the fitness is defined as the cosine distance between rendered canvas and text, both embedded by CLIP
         <dt-cite key="radford2021learning"></dt-cite>, and we optimize the position and the color of triangles using ES,
         which produces diverse and distinct geometric abstractions.
+        We provide a  <a href="https://github.com/es-clip/es-clip-code">reference code implementation</a> of our approach so that it can be a useful tool in the computational artist's toolbox.
         <br />
       </figcaption>
     </div>
@@ -294,7 +295,9 @@ Similarly, genetic algorithms are a popular method applied to approximate images
 Schmidhuber <dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity <dt-cite key="kolmogorov1965three"></dt-cite>.
 Similarly, Algorithmic art <dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
 In a broad sense, Algorithmic art could be said to include Genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
-As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles (See &quot;Basic&quot; in <a href="#fig-es-ours-vs-basic">Figure: Compare choices of evolution algorithm</a> for an example). This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
+As one example, a basic genetic algorithm using evolution has been proposed <dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles
+<dt-fn>See &quot;Basic&quot; in <a href="#fig-es-ours-vs-basic">Figure: Compare choices of evolution algorithm</a> for an example.</dt-fn>.
+This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions <dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
 Interestingly, since these methods are iterative, they also echo Process art <dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.</p>
 <div style="text-align: center;">
    <a name="fig-es-ours-mona-lisa"></a>
@@ -357,7 +360,7 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
 </div>
 <p>We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP <dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
 Interestingly, the results produced by our method resemble Abstract expressionism <dt-cite key="paul2004abstract"></dt-cite> and Minimalist art <dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
-We provide a reference code implementation of our approach so that it can be a useful tool in the computational artist's toolbox.</p>
+We provide a reference code implementation on <a href="https://github.com/es-clip/es-clip-code">https://github.com/es-clip/es-clip-code</a> of our approach so that it can be a useful tool in the computational artist's toolbox.</p>
 <h2>Modern Evolution Strategies based Creativity</h2>
 <div style="text-align: center;">
    <a name="fig-architecture"></a>
@@ -365,7 +368,7 @@ We provide a reference code implementation of our approach so that it can be a u
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Our proposed method synthesizes painting by placing transparent triangles using Evolution Strategy (ES). 
-      The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using as the fitness the loss, which measures how well the canvas fits a target image or an concept in the form of a text prompt.
+      The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using the fitness as the loss, which measures how well the canvas fits a target image or a concept in the form of a text prompt. 
       The fitness, in turn, guides the evolution process to find better parameters.
    </figcaption>
 </div>
@@ -535,6 +538,7 @@ The evolution process also demonstrates the coarse-to-fine adjustment of triangl
       Qualitative and quantitative results from fitting several targets with 10, 25, 50, and 200 triangles, each running for 10,000 steps.
       Images credits: Darwin, Mona Lisa, Velociraptor are from <dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Anime Face is generated by Waifu Labs <dt-cite key="sizigi2019waifu"></dt-cite>. 
       Landscape is from Wikipedia<dt-cite key="wiki:landscape"></dt-cite>. Impressionism is <em>A May Morning in Moret</em> by Alfred Sisley, collected by <dt-cite key="gonsalves2021impressionist"></dt-cite>
+      We show 100% -  L2 Loss as fitness.
    </figcaption>
 </div>
 <p><b>Number of triangles and parameters</b>.
@@ -571,6 +575,7 @@ This allows a human artist to use the number of triangles in order to find the r
    <figcaption style="text-align: left; padding-top: 0;">
       Compare choices of evolution algorithm: Ours (PGPE with ClipUp) vs. a basic evolution algorithm (mutation with simulated Annealing) <dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Both setting fits 50 triangles and all choices except for the evolution algorithm are the same. 
       We show the evolved result and evolution process of ours and the basic algorithm at the end of 10,000 iterations, and the result of the basic algorithm after running <em>56</em> times more iterations.
+      We show 100% -  L2 Loss as fitness.
    </figcaption>
 </div>
 <p><b>Choice of ES Algorithm</b>.
@@ -601,6 +606,7 @@ Furthermore, even allowing <span class="katex"><span class="katex-mathml"><math>
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Evolution strategies vs. differentiable renderer</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
       Evolution Strategies (non-gradient method) vs Differentiable renderer (gradient based method) fitting target image with 200 triangles. 
+      We show 100% -  L2 Loss as fitness.
    </figcaption>
 </div>
 <p><b>Comparison with Gradient-based Optimization</b>.
