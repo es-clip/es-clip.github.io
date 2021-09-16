@@ -11,8 +11,8 @@ The experiments in this work were performed on multi-GPU Linux virtual machines 
 <img src="assets/icons/vision.svg" alt="Vision Icon by artist monkik on Noun Project." style="display: block; margin: auto; width: 4.5%;" align="left"/>&nbsp;&nbsp;Vision icon by artist <a href="https://thenounproject.com/kukkik_jung/">monkik</a>.
 </div>
 
-<!-- YT: Make citation and open source links  when the links are known to us. -->
+<!-- YT: Add citation links when the links are known to us. -->
 
 ## Reuse
 
-Diagrams and text are licensed under Creative Commons Attribution [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) with the [source available on GitHub](https://github.com/attentionagent/attentionagent.github.io), unless noted otherwise. The figures that have been reused from other sources don’t fall under this license and can be recognized by the citations in their caption.
+Diagrams and text are licensed under Creative Commons Attribution [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) with the [source available on GitHub](https://github.com/google/brain-tokyo-workshop/tree/master/es-clip), unless noted otherwise. The figures that have been reused from other sources don’t fall under this license and can be recognized by the citations in their caption.
