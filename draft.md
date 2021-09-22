@@ -19,7 +19,7 @@ Schmidhuber<dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in 
 Similarly, Algorithmic art<dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
 In a broad sense, Algorithmic art could be said to include Genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
 As one example, a basic genetic algorithm using evolution has been proposed<dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles<dt-fn>See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example.</dt-fn>.
-This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions<dt-cite key="fogleman2016,cason2016,shahrabi2020"></dt-cite>.
+This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions<dt-cite key="fogleman2016,cason2016,berg2019evolved,paauw2019paintings,shahrabi2020"></dt-cite>.
 Interestingly, since these methods are iterative, they also echo Process art<dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.
 
 <div style="text-align: center;">
