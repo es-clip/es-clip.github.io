@@ -7,17 +7,17 @@ ______
 
 ## Introduction
 
-Staring from early 20th-century in the wider context of Modernism<dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
-The Cubism art movement<dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by Pablo Picasso and other influential artists, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
-This naturally develops into the Geometric abstraction<dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Wassily Kandinsky and Piet Mondrian represented the world using composed primitives that are either purely geometric and elementary.
+Staring from early 20th-century in the wider context of modernism<dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
+The Cubism art movement<dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by influential artists including Pablo Picasso, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
+This naturally develops into the geometric abstraction<dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Wassily Kandinsky and Piet Mondrian represented the world using composed primitives that are either purely geometric or elementary.
 The impact is far-reaching:
-The use of simple geometry can be seen as one of styles found in the abstract expressionism<dt-cite key="paul2004abstract"></dt-cite>, where artists expressed their subconscious or impulsive feelings.
-It also helped shaped the minimalist art<dt-cite key="tate_minimalism"></dt-cite> and minimalist architecture<dt-cite key="rose1965abc"></dt-cite> movements, in which everything is stripped down to its essential quality to achieve simplicity<dt-cite key="bertoni2002minimalist"></dt-cite>. 
+The use of simple geometry can be seen as one of styles found in abstract expressionism<dt-cite key="paul2004abstract"></dt-cite>, where artists expressed their subconscious or impulsive feelings.
+It also helped shape the minimalist art<dt-cite key="tate_minimalism"></dt-cite> and minimalist architecture<dt-cite key="rose1965abc"></dt-cite> movements, in which everything is stripped down to its essential quality to achieve simplicity<dt-cite key="bertoni2002minimalist"></dt-cite>. 
 
 The idea of minimalist art has also been explored in computer art with a root in mathematical art<dt-cite key="malkevitch2003mathematics"></dt-cite>.
-Schmidhuber<dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art of computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity<dt-cite key="kolmogorov1965three"></dt-cite>.
-Similarly, Algorithmic art<dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
-In a broad sense, Algorithmic art could be said to include Genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
+Schmidhuber<dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art in the computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity<dt-cite key="kolmogorov1965three"></dt-cite>.
+Similarly, algorithmic art<dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
+In a broad sense, algorithmic art could be said to include genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
 As one example, a basic genetic algorithm using evolution has been proposed<dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles<dt-fn>See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example.</dt-fn>.
 This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions<dt-cite key="fogleman2016,cason2016,berg2019evolved,paauw2019paintings,shahrabi2020"></dt-cite>.
 Interestingly, since these methods are iterative, they also echo Process art<dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.
@@ -36,13 +36,13 @@ Interestingly, since these methods are iterative, they also echo Process art<dt-
    </table>
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Our method fitting painting "Mona Lisa"</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Our Method leverages modern ES (PGPE with ClipUp), which 50 triangles and runs for 10,000 steps to fit the target image "Mona Lisa"' here. 
-      The target image is followed by the finally evolved results and the evolution process follows the target image.
+      Our method leverages modern ES (PGPE with ClipUp), which 50 triangles and runs for 10,000 steps to fit the target image "Mona Lisa"' here. 
+      The target image is followed by the finally evolved results and the evolution process.
    </figcaption>
 </div>
 
 With the recent resurgence of interest in evolution strategies (ES) in the machine learning community<dt-cite key="salimans2017evolution,ha2017evolving"></dt-cite>, in this work, we revisit the use of ES for creativity applications as an alternative to gradient-based methods. 
-For the image-approximation with shapes task, we find that modern ES algorithms offer large improvements in both quality and efficiency when compared to traditional genetic algorithms, and as we will also demonstrate, even comparable to state-of-the-art differentiable rendering methods<dt-cite key="laine2020modular"></dt-cite>.
+For approximating an image with shapes, we find that modern ES algorithms offer large improvements in both quality and efficiency when compared to traditional genetic algorithms, and as we will also demonstrate, even comparable to state-of-the-art differentiable rendering methods<dt-cite key="laine2020modular"></dt-cite>.
 
 <div style="text-align: center;">
    <a name="fig-es-clip-examples"> </a>
@@ -86,9 +86,9 @@ For the image-approximation with shapes task, we find that modern ES algorithms 
 
 
 We show that ES is also well suited at optimizing the placement of shapes to fit the CLIP<dt-cite key="radford2021learning"></dt-cite> model, and can produce diverse, distinct geometric abstractions that are aligned with human interpretation of language.
-Interestingly, the results produced by our method resemble Abstract expressionism<dt-cite key="paul2004abstract"></dt-cite> and Minimalist art<dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
-We will provide a reference code implementation of our approach so that it can be a useful tool in the computational artist's toolbox.
-
+Such an alignment is due to the use of CLIP model that are trained on aligned real-world text-image dataset.
+Interestingly, the results produced by our method resemble abstract expressionism<dt-cite key="paul2004abstract"></dt-cite> and minimalist art<dt-cite key="tate_minimalism,rose1965abc"></dt-cite>.
+We provide a reference code implementation of our approach online so that it can be a useful tool in the computational artist's toolbox.
 ## Modern Evolution Strategies based Creativity
 
 <div style="text-align: center;">
@@ -96,7 +96,7 @@ We will provide a reference code implementation of our approach so that it can b
    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/manual/pg_0002.jpg" style="display: block; margin: auto; width: 100%;">
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: The architecture of our method</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Our proposed method synthesizes painting by placing transparent triangles using Evolution Strategy (ES). 
+      Our proposed method synthesizes painting by placing transparent triangles using evolution strategy (ES). 
       The ES algorithm calculates the fitness by first rendering the parameters on a canvas, and then using the fitness as the loss, which measures how well the canvas fits a target image or a concept in the form of a text prompt. 
       The fitness, in turn, guides the evolution process to find better parameters.
    </figcaption>
@@ -109,7 +109,7 @@ render such configuration onto a canvas,
 and calculate its fitness based on how well the rendered canvas fits a target image or an concept in the form of a text prompt.
 The ES algorithm keeps a pool of candidate configurations and uses mutations to evolves better ones measured by the said fitness.
 To have better creative results, we use a modern ES algorithm, PGPE<dt-cite key="sehnke2010parameter"></dt-cite> optimized by ClipUp<dt-cite key="toklu2020clipup"></dt-cite> optimizer. 
-Engineering-wise we use the pgpelib<dt-cite key="toklu2008pgpelib"></dt-cite> Python implementation of PGPE and ClipUp.
+Engineering-wise we use the pgpelib<dt-cite key="toklu2008pgpelib"></dt-cite> implementation of PGPE and ClipUp.
 
 
 As we choose to follow the spirit of minimalist art, we use transparent triangles as the parameter space.
@@ -121,7 +121,7 @@ Note that $N$ is better understood as the upper bound of number of triangles to 
 As the ES is orthogonal to the concrete fitness evaluation, we are left with many free choices regarding what counts as fitting.
 Particularly, we consider two kinds of fitness, namely, fitting a concrete image and fitting a concept (the lower branch and the upper branch in [Figure: The architecture of our method](#fig-architecture) above respectively).
 Fitting a concrete image is straightforward, where we can simply use the pixel-wise L2 loss between the rendered canvas and the target image as the fitness.
-Fitting a concept requires more elaboration. We represent the concept as a text prompt and embed the text prompt using the text encoder in CLIP<dt-cite key="radford2021learning"></dt-cite>. 
+Fitting a concept requires more elaboration. We represent the concept as a text prompt and embed the text prompt using the text encoder in CLIP<dt-cite key="radford2021learning"></dt-cite> which we discuss in detail in Related Works. 
 Then we embed the rendered canvas using the image encoder also available in CLIP. Since the CLIP models are trained so that both embedded images and texts are comparable under Cosine distance for similarity, we use such distance as the fitness.
 We note that since the ES algorithm provides black-box optimization, the renderer, like fitness computation, does not necessarily need to be differentiable.
 
@@ -312,7 +312,7 @@ This allows a human artist to use the number of triangles in order to find the r
    </table>
    <figcaption style="text-align: left; color:#FF6C00; padding-top: 0;">Figure: Compare choices of evolution algorithm</figcaption>
    <figcaption style="text-align: left; padding-top: 0;">
-      Compare choices of evolution algorithm: Ours (PGPE with ClipUp) vs. a basic evolution algorithm (mutation with simulated Annealing)<dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Both setting fits 50 triangles and all choices except for the evolution algorithm are the same. 
+      Compare choices of evolution algorithm: Ours (PGPE with ClipUp) vs. a basic evolution algorithm (mutation with simulated annealing)<dt-cite key="alteredqualia2008evolutiongenetic"></dt-cite>. Both setting fits 50 triangles and all choices except for the evolution algorithm are the same. 
       We show the evolved result and evolution process of ours and the basic algorithm at the end of 10,000 iterations, and the result of the basic algorithm after running <em>56</em> times more iterations.
       We show 100% -  L2 Loss as fitness.
    </figcaption>
@@ -354,7 +354,7 @@ Furthermore, even allowing $56$ times more iterations for the basic algorithm do
 
 
 <b>Comparison with Gradient-based Optimization</b>.
-While our proposed approach is ES-based, it is interesting to investigate how it compares to gradient-based optimization since the latter is commonly adopted recently .
+While our proposed approach is ES-based, it is interesting to investigate how it compares to gradient-based optimization since the latter is commonly adopted recently.
 Therefore we conduct a gradient-based setup by implementing rendering of composed triangles using nvdiffrast<dt-cite key="laine2020modular"></dt-cite>, a point-sampling-based differentiable renderer.
 We use the same processing as does our ES approach.
 As shown in [Figure: Evolution strategies vs. differentiable renderer](#fig-es-vs-diff) above, our proposed ES-based method can achieve similar yet slightly higher fitness than results compared with the gradient-optimized differentiable renderer.
@@ -702,11 +702,11 @@ For learning abstract representations, probabilistic generative models<dt-cite k
 To interface with natural language, methods have been proposed to procedurally generate drawings of image categories<dt-cite key="white2019shared"></dt-cite>, and word embeddings<dt-cite key="huang2019sketchforme,huang2020scones"></dt-cite>, enabling an algorithm to <em>draw what's written</em>.
 This combination of NLP and pixel image generation is explored at larger scale in CLIP<dt-cite key="radford2021learning"></dt-cite>, and its procedural sketch counterpart CLIPDraw<dt-cite key="frans2021clipdraw"></dt-cite>.
 
-<b> Perhaps the closest to our approach </b> among the related works is from Fernando et al.<dt-cite key="fernando2021generative"></dt-cite>, which, similar to our work, uses a CLIP-like dual-encoder model pre-trained on the ALIGN<dt-cite key="jia2021scaling"></dt-cite> dataset to judge the similarity between generated art and text prompt, and leverages evolutionary algorithms to optimize a non-differentiable rendering process. 
-However, there are several key differences between<dt-cite key="fernando2021generative"></dt-cite> and our work:
+<b> Perhaps the closest to our approach </b> among the related works is <dt-cite key="fernando2021generative"></dt-cite>, which, similar to our work, uses a CLIP-like dual-encoder model pre-trained on the ALIGN<dt-cite key="jia2021scaling"></dt-cite> dataset to judge the similarity between generated art and text prompt, and leverages evolutionary algorithms to optimize a non-differentiable rendering process. 
+However, there are several key differences:
 <dt-cite key="fernando2021generative"></dt-cite> parameterizes the rendering process with a hierarchical neural Lindenmayer system<dt-cite key="lindenmayer1968mathematical"></dt-cite> powered by multiple-layer LSTM<dt-cite key="hochreiter1997long"></dt-cite> and, as a result, it models well patterns with complex spatial relation, 
 whereas our work favors a drastically simpler parameterization which just puts triangles individually on canvas to facilitate a different, minimalist art style that is complementary to theirs (See<dt-cite key="fernando2021royal"></dt-cite>). 
-Moreover, while<dt-cite key="fernando2021generative"></dt-cite> uses a simple binary-tournament genetic algorithm<dt-cite key="harvey2009microbial"></dt-cite>, we opt for a modern state-of-the-art evolution strategy algorithm, PGPE<dt-cite key="sehnke2010parameter"></dt-cite> with ClipUp<dt-cite key="toklu2020clipup"></dt-cite>, performing well enough to produce interesting results within a few thousand computational steps.
+Moreover, while<dt-cite key="fernando2021generative"></dt-cite> uses a simple binary-tournament genetic algorithm<dt-cite key="harvey2009microbial"></dt-cite>, we opt for a modern state-of-the-art evolution strategy, PGPE<dt-cite key="sehnke2010parameter"></dt-cite> with ClipUp<dt-cite key="toklu2020clipup"></dt-cite>, performing well enough to produce interesting results within a few thousand steps.
 
 ### Backgrounds of our Work
 
