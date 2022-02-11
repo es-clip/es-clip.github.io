@@ -29,7 +29,7 @@ Appendix content goes in `draft_appendix.md`. Add bib entries to `draft_bib.html
 Run `./bin/make` to build document into `index.html` (which are identical). 
 Or, with [fswatch](https://github.com/emcrisostomo/fswatch), build automaticaly when files are changed: `./bin/watch`.
 
-Run `python -m http.server` to serve on the base directory to view `index.html` in a local browser for debugging.
+Run `python3 -m http.server` to serve on the base directory to view `index.html` in a local browser for debugging.
 
 To watch all markdown files for changes and then compile them, you can run the following
 ```
