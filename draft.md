@@ -8,19 +8,19 @@ ______
 ## Introduction
 
 Staring from early 20th-century in the wider context of modernism<dt-cite key="kuiper2021modernism"></dt-cite>, a series of avant-garde art abandoned the depiction of objects from tradition rules of perspective and instead picking revolutionary, abstract point of views.
-The Cubism art movement<dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by influential artists including Pablo Picasso, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
-This naturally develops into the geometric abstraction<dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Wassily Kandinsky and Piet Mondrian represented the world using composed primitives that are either purely geometric or elementary.
+The <b>Cubism art movement</b><dt-cite key="rewald2014heilbrunn"></dt-cite>, popularized by influential artists including Pablo Picasso, proposed that objects are analyzed by the artist, broken up, and reassembled in an abstract form consisting of geometric representations. 
+This naturally develops into the <b>geometric abstraction</b><dt-cite key="dabrowski2004geometric"></dt-cite>, where pioneer abstractionists like Wassily Kandinsky and Piet Mondrian represented the world using composed primitives that are either purely geometric or elementary.
 The impact is far-reaching:
-The use of simple geometry can be seen as one of styles found in abstract expressionism<dt-cite key="paul2004abstract"></dt-cite>, where artists expressed their subconscious or impulsive feelings.
-It also helped shape the minimalist art<dt-cite key="tate_minimalism"></dt-cite> and minimalist architecture<dt-cite key="rose1965abc"></dt-cite> movements, in which everything is stripped down to its essential quality to achieve simplicity<dt-cite key="bertoni2002minimalist"></dt-cite>. 
+The use of simple geometry can be seen as one of styles found in <b>abstract expressionism</b><dt-cite key="paul2004abstract"></dt-cite>, where artists expressed their subconscious or impulsive feelings.
+It also helped shape the <b>minimalist art</b><dt-cite key="tate_minimalism"></dt-cite> and <b>minimalist architecture</b><dt-cite key="rose1965abc"></dt-cite> movements, in which everything is stripped down to its essential quality to achieve simplicity<dt-cite key="bertoni2002minimalist"></dt-cite>.
 
-The idea of minimalist art has also been explored in computer art with a root in mathematical art<dt-cite key="malkevitch2003mathematics"></dt-cite>.
-Schmidhuber<dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <em>low-complexity art</em>, as the minimal art in the computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity<dt-cite key="kolmogorov1965three"></dt-cite>.
-Similarly, algorithmic art<dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
+The idea of minimalist art has also been explored in computer art with a root in <b>mathematical art</b><dt-cite key="malkevitch2003mathematics"></dt-cite>.
+Schmidhuber<dt-cite key="schmidhuber1997low"></dt-cite> proposed an art form in the 1990s, called <b>low-complexity art</b>, as the minimal art in the computer age that attempts to depict the <em>essence</em> of an object by making use of ideas from algorithmic complexity<dt-cite key="kolmogorov1965three"></dt-cite>.
+Similarly, <b>algorithmic art</b><dt-cite key="verostko1994algorithmic"></dt-cite> proposed to generate arts using the algorithm designed by the artist.
 In a broad sense, algorithmic art could be said to include genetic algorithm where the artist determines the rules governing how images evolves iteratively, which are a popular method applied to approximate images using simple shapes, often producing abstract art style.
-As one example, a basic genetic algorithm using evolution has been proposed<dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles<dt-fn>See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example.</dt-fn>.
+As one example, a basic <b>genetic algorithm</b> using evolution has been proposed<dt-cite key="johansson2008genetic,alteredqualia2008evolutiongenetic"></dt-cite> to represent a target image using semi-transparent, overlapping triangles<dt-fn>See "Basic" in [Figure: Compare choices of evolution algorithm](#fig-es-ours-vs-basic) for an example.</dt-fn>.
 This approach has gained popularity over the years with the creative coding community, resulting in a number of sophisticated extensions<dt-cite key="fogleman2016,cason2016,berg2019evolved,paauw2019paintings,shahrabi2020"></dt-cite>.
-Interestingly, since these methods are iterative, they also echo Process art<dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.
+Interestingly, since these methods are iterative, they also echo <b>process art</b><dt-cite key="tate2021process"></dt-cite> which emphasizes the process of making.
 
 <div style="text-align: center;">
    <a name="fig-es-ours-mona-lisa"></a>
